@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+:root {
+    font-family: "Oxanium", sans-serif;
+    color: #f2f6ff;
+    background: #07111f;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --space-ink: #07111f;
+    --space-deep: #0b1728;
+    --space-panel: rgba(13, 25, 43, 0.94);
+    --space-panel-soft: rgba(17, 35, 57, 0.86);
+    --space-line: rgba(126, 214, 255, 0.42);
+    --space-line-soft: rgba(126, 214, 255, 0.16);
+    --space-cyan: #7ed6ff;
+    --space-cyan-bright: #39b9ff;
+    --space-amber: #ffc857;
+    --space-muted: #8d9ab5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+    background-color: var(--space-ink);
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: "Oxanium", sans-serif;
+}
+
+button {
+    font: inherit;
+}
+
+/* Ensure the React app root stacks above the background starmap */
+#root {
+    position: relative;
+    z-index: 1;
+}

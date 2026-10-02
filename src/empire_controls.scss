@@ -1,0 +1,103 @@
+.empire-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.8rem;
+    z-index: 100;
+
+    button {
+        color: #dceeff;
+        border: 1px solid var(--space-line);
+        border-radius: 0.25rem;
+        padding: 0.55rem 0.85rem;
+        cursor: pointer;
+        background: rgba(13, 25, 43, 0.92);
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        transition: 160ms ease;
+    
+        &:hover {
+            border-color: var(--space-cyan);
+            background: var(--space-panel-soft);
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            background: var(--space-deep);
+            transform: translateY(0);
+        }
+    }
+
+    .turn-button {
+        color: var(--space-amber);
+        border-color: rgba(255, 200, 87, 0.65);
+    }
+
+    .research {
+        color: var(--space-cyan);
+    }
+
+    .shipyard-backdrop {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+        background: rgba(2, 8, 16, 0.68);
+        z-index: 200;
+    }
+
+    .shipyard {
+        width: min(32rem, 100%);
+        padding: 1.3rem;
+        border: 1px solid var(--space-line);
+        border-radius: 0.35rem;
+        background: linear-gradient(155deg, rgba(16, 35, 57, 0.99), rgba(7, 17, 31, 0.99));
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5), 0 0 2rem rgba(57, 185, 255, 0.12);
+        color: #f2f6ff;
+    }
+
+    .shipyard__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 0.9rem;
+        border-bottom: 1px solid var(--space-line-soft);
+    }
+
+    .shipyard__eyebrow,
+    .shipyard label {
+        color: var(--space-cyan);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .shipyard h2 { margin: 0.2rem 0 0; font-size: 1.45rem; }
+    .shipyard__close { padding: 0.2rem 0.5rem; color: var(--space-muted); font-size: 1.2rem; }
+    .shipyard__balance { color: var(--space-amber); font-size: 0.8rem; }
+
+    .shipyard select {
+        display: block;
+        width: 100%;
+        margin: 0.4rem 0 1rem;
+        padding: 0.65rem;
+        border: 1px solid var(--space-line);
+        border-radius: 0.2rem;
+        color: #eaf6ff;
+        background: rgba(7, 17, 31, 0.8);
+    }
+
+    .shipyard__designs { display: grid; gap: 0.5rem; }
+    .shipyard__design { display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 0.8rem; text-align: left; }
+    .shipyard__design small { grid-column: 1 / -1; color: var(--space-muted); font-size: 0.65rem; }
+    .shipyard__design span { color: var(--space-amber); }
+    .shipyard__design--selected { border-color: var(--space-cyan); background: rgba(57, 185, 255, 0.12); }
+    .shipyard__error { color: #ff9d9d; font-size: 0.72rem; }
+    .shipyard__purchase { width: 100%; margin-top: 1rem; color: var(--space-amber); }
+}

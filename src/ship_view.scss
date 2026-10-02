@@ -1,0 +1,119 @@
+.ship-view {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    width: min(18rem, calc(100vw - 2rem));
+    padding: 1rem 1.1rem;
+    color: white;
+    background: linear-gradient(155deg, rgba(16, 35, 57, 0.98), rgba(7, 17, 31, 0.96));
+    border: 1px solid var(--space-line);
+    border-radius: 0.35rem;
+    box-shadow: 0 0 24px rgba(52, 157, 255, 0.2);
+    z-index: 20;
+
+    &__eyebrow {
+        color: var(--space-cyan);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        margin: 0.25rem 0 0;
+        font-size: 1.4rem;
+    }
+
+    &__location {
+        margin: 0.3rem 0 1rem;
+        color: #b9c4db;
+        font-size: 0.8rem;
+    }
+
+    &__fleet-label {
+        display: block;
+        margin-top: 0.8rem;
+        color: var(--space-muted);
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &__fleet-select {
+        width: 100%;
+        margin: 0.35rem 0 0.7rem;
+        padding: 0.5rem;
+    }
+
+    &__movement {
+        padding: 0.8rem 0;
+        border-top: 1px solid var(--space-line-soft);
+        border-bottom: 1px solid var(--space-line-soft);
+    }
+
+    &__movement label {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--space-cyan);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &__route {
+        display: flex;
+        gap: 0.4rem;
+    }
+
+    select,
+    button {
+        min-width: 0;
+        border: 1px solid var(--space-line);
+        border-radius: 0.2rem;
+        color: #eaf6ff;
+        background: rgba(7, 17, 31, 0.8);
+        font-size: 0.72rem;
+    }
+
+    select {
+        flex: 1;
+        padding: 0.55rem;
+    }
+
+    button {
+        padding: 0.55rem 0.8rem;
+        color: var(--space-amber);
+        cursor: pointer;
+    }
+
+    button:disabled,
+    select:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+    }
+
+    &__hint,
+    &__error {
+        display: block;
+        margin-top: 0.45rem;
+        font-size: 0.68rem;
+    }
+
+    &__hint { color: var(--space-muted); }
+    &__error { color: #ff9d9d; }
+
+    dl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+        margin: 0;
+    }
+
+    dl div {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    dt { color: #8d9ab5; }
+    dd { margin: 0; color: #f2f6ff; }
+}
