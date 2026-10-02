@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://kingofthegalaxy-backend.onrender.com';
+export const API_BASE_URL = 'https://kingofthegalaxy-backend.onrender.com';
